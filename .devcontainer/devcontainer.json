@@ -5,6 +5,10 @@
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
   "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
 
+  "mounts": [
+    "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind"
+  ],
+
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
     "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {},

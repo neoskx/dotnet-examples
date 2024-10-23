@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>vscode_remote_try_dotnet</RootNamespace>
+    <RootNamespace>examples_dotnet</RootNamespace>
   </PropertyGroup>
 
 </Project>
