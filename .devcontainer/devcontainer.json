@@ -1,33 +1,23 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
+// README at: https://github.com/devcontainers/templates/tree/main/src/dotnet
 {
   "name": "examples-dotnet",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
+
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
-    "ghcr.io/devcontainers/features/common-utils": {},
-    "ghcr.io/devcontainers/features/git": {},
+    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {},
     "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
       "omzPlugins": "colored-man-pages zsh-autosuggestions zsh-syntax-highlighting zsh-completions"
-    },
-    "ghcr.io/sebst/devcontainer-features/desktop-novnc:0": {},
-    "ghcr.io/devcontainers/features/node:1": {},
-    "ghcr.io/devcontainers-community/npm-features/typescript:1": {},
-    "ghcr.io/nils-geistmann/devcontainers-features/zsh:0": {},
-    "ghcr.io/nikiforovall/devcontainer-features/dotnet-aspire:1": {}
+    }
   },
-
-  // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  // "forwardPorts": [],
-
-  // Use 'postCreateCommand' to run commands after the container is created.
-  // "postCreateCommand": "uname -a",
 
   // Configure tool-specific properties.
   "customizations": {
     "vscode": {
       "extensions": [
+        "streetsidesoftware.code-spell-checker",
         "mads-hartmann.bash-ide-vscode",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode"
@@ -60,7 +50,25 @@
         }
       }
     }
-  }
+  },
+
+  // Use 'portsAttributes' to set default properties for specific forwarded ports.
+  // More info: https://containers.dev/implementors/json_reference/#port-attributes
+  "portsAttributes": {
+    "5000": {
+      "label": "Hello Remote World",
+      "onAutoForward": "notify"
+    },
+    "5001": {
+      "protocol": "https"
+    }
+  },
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [5000, 5001]
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // "postCreateCommand": "dotnet restore",
 
   // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
   // "remoteUser": "root"
