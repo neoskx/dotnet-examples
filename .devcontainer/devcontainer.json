@@ -6,6 +6,7 @@
   "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0",
 
   "mounts": [
+    // To fix git error cause by permission
     "source=${localEnv:HOME}/.gitconfig,target=/home/vscode/.gitconfig,type=bind"
   ],
 
@@ -24,7 +25,9 @@
         "streetsidesoftware.code-spell-checker",
         "mads-hartmann.bash-ide-vscode",
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "ms-dotnettools.csdevkit",
+        "EditorConfig.EditorConfig"
       ],
       "settings": {
         "editor.codeActionsOnSave": {
