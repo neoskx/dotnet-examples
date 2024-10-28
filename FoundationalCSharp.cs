@@ -116,5 +116,90 @@
 // Console.WriteLine($"'o' appears {letterCount} times.");
 
 // ======= Develop foreach and if-elseif-else Structures to Process Array Data in C#
+// // initialize variables - graded assignments 
+// int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+// int[] andrewScores = new int[] { 92, 89, 81, 96, 90, 89 };
+// int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
+// int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
+// int[] beckyScores = new int[] { 92, 91, 90, 91, 92, 92, 92 };
+// int[] chrisScores = new int[] { 84, 86, 88, 90, 92, 94, 96, 98 };
+// int[] ericScores = new int[] { 80, 90, 100, 80, 90, 100, 80, 90 };
+// int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91 };
 
+// int[][] studentScores = new int[][] { sophiaScores, andrewScores, emmaScores, loganScores, beckyScores, chrisScores, ericScores, gregorScores };
+// string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor" };
 
+// Console.WriteLine("Student\t\tGrade\n");
+// int index = 0;
+// foreach (int[] studentScore in studentScores)
+// {
+//   int currentAssignments = 0;
+//   int studentSum = 0;
+//   decimal scoreResult;
+//   string currentStudentLetterGrade = "";
+//   foreach (int score in studentScore)
+//   {
+//     // add the exam score to the sum
+//     studentSum += score;
+//     currentAssignments++;
+//   }
+//   // Console.WriteLine("currentAssignments: " + currentAssignments);
+//   scoreResult = (decimal)studentSum / currentAssignments;
+
+//   if (scoreResult >= 97)
+//   {
+//     currentStudentLetterGrade = "A+";
+//   }
+//   else if (scoreResult >= 93)
+//   {
+//     currentStudentLetterGrade = "A";
+//   }
+//   else if (scoreResult >= 90)
+//   {
+//     currentStudentLetterGrade = "A-";
+//   }
+//   else if (scoreResult >= 87)
+//   {
+//     currentStudentLetterGrade = "B+";
+//   }
+//   else if (scoreResult >= 83)
+//   {
+//     currentStudentLetterGrade = "B";
+//   }
+//   else if (scoreResult >= 80)
+//   {
+//     currentStudentLetterGrade = "B-";
+//   }
+//   else if (scoreResult >= 77)
+//   {
+//     currentStudentLetterGrade = "C+";
+//   }
+//   else if (scoreResult >= 73)
+//   {
+//     currentStudentLetterGrade = "C";
+//   }
+//   else if (scoreResult >= 70)
+//   {
+//     currentStudentLetterGrade = "C-";
+//   }
+//   else if (scoreResult >= 67)
+//   {
+//     currentStudentLetterGrade = "D+";
+//   }
+//   else if (scoreResult >= 63)
+//   {
+//     currentStudentLetterGrade = "D";
+//   }
+//   else if (scoreResult >= 60)
+//   {
+//     currentStudentLetterGrade = "D-";
+//   }
+//   else
+//   {
+//     currentStudentLetterGrade = "F";
+//   }
+
+//   Console.WriteLine($"{studentNames[index++]}:\t\t{scoreResult:F2}\t{currentStudentLetterGrade}");
+// }
+
+// ======= Develop foreach and if-elseif-else Structures to Process Array Data in C# 
