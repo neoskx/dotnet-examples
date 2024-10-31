@@ -5,14 +5,14 @@
       // Use IntelliSense to find out which attributes exist for C# debugging
       // Use hover for the description of the existing attributes
       // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-      "name": "C#: FundationalCSharp",
+      "name": "C#: Build and Run",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build-fundationalcsharp",
+      "preLaunchTask": "build",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/FundationalCSharp/bin/Debug/net8.0/fundationalcsharp-dotnet.dll",
+      "program": "${workspaceFolder}/${input:projectName}/bin/Debug/net8.0/${input:projectName}.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/FundationalCSharp",
+      "cwd": "${workspaceFolder}/${input:projectName}",
       "stopAtEntry": false,
       // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
       "serverReadyAction": {
@@ -21,10 +21,16 @@
       },
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "sourceFileMap": {
-        "/Views": "${workspaceFolder}/FundationalCSharp/Views"
       }
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "projectName",
+      "description": "Which project do you want to run?",
+      "options": ["FundationalCSharp"],
+      "default": "FundationalCSharp"
     }
   ]
 }

@@ -2,40 +2,55 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build-fundationalcsharp",
+      "label": "build",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/FundationalCSharp/fundationalcsharp-dotnet.csproj",
+        "${workspaceFolder}/${input:projectName}/${input:projectName}.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
-      "problemMatcher": "$msCompile"
+      "problemMatcher": "$msCompile",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     },
     {
-      "label": "publish-fundationalcsharp",
+      "label": "publish",
       "command": "dotnet",
       "type": "process",
       "args": [
         "publish",
-        "${workspaceFolder}/FundationalCSharp/fundationalcsharp-dotnet.csproj",
+        "${workspaceFolder}/${input:projectName}/${input:projectName}.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "watch-fundationalcsharp",
+      "label": "watch",
       "command": "dotnet",
       "type": "process",
       "args": [
         "watch",
         "run",
         "--project",
-        "${workspaceFolder}/FundationalCSharp/fundationalcsharp-dotnet.csproj"
+        "${workspaceFolder}/${input:projectName}/${input:projectName}.csproj"
       ],
-      "problemMatcher": "$msCompile"
+      "problemMatcher": "$msCompile",
+      "group": "build",
+      "isBackground": true
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "projectName",
+      "description": "Which project do you want to run?",
+      "options": ["FundationalCSharp"],
+      "default": "FundationalCSharp"
     }
   ]
 }
