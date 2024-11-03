@@ -27,7 +27,11 @@
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "ms-dotnettools.csdevkit",
-        "EditorConfig.EditorConfig"
+        "formulahendry.dotnet-test-explorer",
+        "adrianwilczynski.user-secrets",
+        "EditorConfig.EditorConfig",
+        "ckolkman.vscode-postgres",
+        "nick-rudenko.back-n-forth"
       ],
       "settings": {
         "editor.codeActionsOnSave": {

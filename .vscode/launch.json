@@ -29,7 +29,7 @@
       "type": "pickString",
       "id": "projectName",
       "description": "Which project do you want to run?",
-      "options": ["FundationalCSharp"],
+      "options": ["FundationalCSharp", "ClassExample"],
       "default": "FundationalCSharp"
     }
   ]
